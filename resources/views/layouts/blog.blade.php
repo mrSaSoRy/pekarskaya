@@ -60,7 +60,8 @@
                                                 <li><a href="">Педагогам</a></li>
                                                 <li><a href="">Родителям</a></li>
                                                 <li><a href="about.html">Биография</a></li>
-                                                <li><a href="services.html">Services</a></li>
+
+                                                <!-- <li><a href="services.html">Services</a></li>
                                                 <li><a href="portfolio.html">Portfolio</a></li>
                                                 <li><a href="#">Page</a>
                                                     <ul class="submenu">
@@ -69,14 +70,14 @@
                                                         <li><a href="elements.html">Element</a></li>
                                                         <li><a href="portfolio_details.html">Portfolio Details</a></li>
                                                     </ul>
-                                                </li>
+                                                </li>-->
                                                 <!-- <li><a href="contact.html">Contact</a></li> -->
                                             </ul>
                                         </nav>
                                     </div>
-                                    <div class="header-right-btn f-right d-none d-xl-block ml-20">
+                                  <!--  <div class="header-right-btn f-right d-none d-xl-block ml-20">
                                         <a href="#" class="btn header-btn">Get Free Consultent</a>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <!-- Mobile Menu -->
@@ -91,7 +92,8 @@
     </header>
     <main>
 
-        <!-- Hero Start -->
+         <!-- Hero Start -->
+        <!--
         <div class="slider-area ">
             <div class="slider-height2 d-flex align-items-center">
                 <div class="container">
@@ -111,13 +113,18 @@
                 </div>
             </div>
         </div>
+        -->
         <!-- Hero End -->
         <!--================Blog Area =================-->
+
         <section class="blog_area section-padding">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mb-5 mb-lg-0">
+
                         <div class="blog_left_sidebar">
+                            @yield('page')
+                            <!--
                             <article class="blog_item">
                                 <div class="blog_item_img">
                                     <img class="card-img rounded-0" src="assets/img/blog/single_blog_1.png" alt="">
@@ -248,6 +255,7 @@
                                     </li>
                                 </ul>
                             </nav>
+                        -->
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -256,22 +264,26 @@
                                 <form action="#">
                                     <div class="form-group">
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder='Search Keyword'
+                                            <input type="text" class="form-control" placeholder='Поиск'
                                                 onfocus="this.placeholder = ''"
-                                                onblur="this.placeholder = 'Search Keyword'">
+                                                onblur="this.placeholder = 'Поиск'">
                                             <div class="input-group-append">
                                                 <button class="btns" type="button"><i class="ti-search"></i></button>
                                             </div>
                                         </div>
                                     </div>
+                                    <!--
                                     <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
                                         type="submit">Search</button>
+                                        -->
                                 </form>
                             </aside>
 
                             <aside class="single_sidebar_widget post_category_widget">
-                                <h4 class="widget_title">Category</h4>
+                                <h4 class="widget_title">Рубрика блога</h4>
                                 <ul class="list cat-list">
+                                    @yield('category')
+                                    <!--
                                     <li>
                                         <a href="#" class="d-flex">
                                             <p>Resaurant food</p>
@@ -308,11 +320,14 @@
                                             <p>09</p>
                                         </a>
                                     </li>
+                                    -->
                                 </ul>
                             </aside>
 
                             <aside class="single_sidebar_widget popular_post_widget">
-                                <h3 class="widget_title">Recent Post</h3>
+                                <h3 class="widget_title">Свежие записи</h3>
+                                @yield('new_page')
+                                <!--
                                 <div class="media post_item">
                                     <img src="assets/img/post/post_1.png" alt="post">
                                     <div class="media-body">
@@ -349,7 +364,9 @@
                                         <p>01 Hours ago</p>
                                     </div>
                                 </div>
+                                -->
                             </aside>
+                           <!--
                             <aside class="single_sidebar_widget tag_cloud_widget">
                                 <h4 class="widget_title">Tag Clouds</h4>
                                 <ul class="list">
@@ -379,6 +396,7 @@
                                     </li>
                                 </ul>
                             </aside>
+
 
                             <aside class="single_sidebar_widget instagram_feeds">
                                 <h4 class="widget_title">Instagram Feeds</h4>
@@ -415,6 +433,7 @@
                                     </li>
                                 </ul>
                             </aside>
+                            -->
 
 
                             <aside class="single_sidebar_widget newsletter_widget">
@@ -434,6 +453,7 @@
                 </div>
             </div>
         </section>
+
         <!--================Blog Area =================-->
 
     </main>
