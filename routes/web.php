@@ -21,3 +21,12 @@ Route::get('/blog', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Auth::routes(['verify' => true]);
+
+Route::get('/home', 'HomeController@index')->middleware('verified');
+
+Route::resource('categories', 'CategoryController');
+
+Route::resource('pages', 'PageController');

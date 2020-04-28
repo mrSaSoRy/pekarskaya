@@ -438,12 +438,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/InfyOmLabs/laravel-generator.git",
-                "reference": "90eb130dff83d27020d846486439d066804bd4f0"
+                "reference": "16a7c84bfa021eeff4dd0c6390faff76a7eea9db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/InfyOmLabs/laravel-generator/zipball/90eb130dff83d27020d846486439d066804bd4f0",
-                "reference": "90eb130dff83d27020d846486439d066804bd4f0",
+                "url": "https://api.github.com/repos/InfyOmLabs/laravel-generator/zipball/16a7c84bfa021eeff4dd0c6390faff76a7eea9db",
+                "reference": "16a7c84bfa021eeff4dd0c6390faff76a7eea9db",
                 "shasum": ""
             },
             "require": {
@@ -496,7 +496,13 @@
                 "test",
                 "view"
             ],
-            "time": "2020-04-18T05:23:49+00:00"
+            "funding": [
+                {
+                    "url": "https://opencollective.com/infyomlabs",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2020-04-24T09:19:08+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -1002,6 +1008,12 @@
                 "s3",
                 "sftp",
                 "storage"
+            ],
+            "funding": [
+                {
+                    "url": "https://offset.earth/frankdejonge",
+                    "type": "other"
+                }
             ],
             "time": "2020-04-16T13:21:26+00:00"
         },
@@ -3349,6 +3361,20 @@
                 "debug",
                 "dump"
             ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-03-27T16:54:36+00:00"
         },
         {
@@ -3460,6 +3486,12 @@
                 "dotenv",
                 "env",
                 "environment"
+            ],
+            "funding": [
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/vlucas/phpdotenv",
+                    "type": "tidelift"
+                }
             ],
             "time": "2020-04-12T15:18:03+00:00"
         }
