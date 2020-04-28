@@ -5,7 +5,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2020-04-27 01:20:37.
+    * Generated on 2020-04-28 04:46:01.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -132,6 +132,7 @@ namespace PHPSTORM_META {
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
         'html' => \Collective\Html\HtmlBuilder::class,
+        'image' => \Intervention\Image\ImageManager::class,
         'infyom.api' => \InfyOm\Generator\Commands\API\APIGeneratorCommand::class,
         'infyom.api.controller' => \InfyOm\Generator\Commands\API\APIControllerGeneratorCommand::class,
         'infyom.api.requests' => \InfyOm\Generator\Commands\API\APIRequestsGeneratorCommand::class,
@@ -299,6 +300,7 @@ namespace PHPSTORM_META {
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
         'html' => \Collective\Html\HtmlBuilder::class,
+        'image' => \Intervention\Image\ImageManager::class,
         'infyom.api' => \InfyOm\Generator\Commands\API\APIGeneratorCommand::class,
         'infyom.api.controller' => \InfyOm\Generator\Commands\API\APIControllerGeneratorCommand::class,
         'infyom.api.requests' => \InfyOm\Generator\Commands\API\APIRequestsGeneratorCommand::class,
@@ -466,6 +468,7 @@ namespace PHPSTORM_META {
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
         'html' => \Collective\Html\HtmlBuilder::class,
+        'image' => \Intervention\Image\ImageManager::class,
         'infyom.api' => \InfyOm\Generator\Commands\API\APIGeneratorCommand::class,
         'infyom.api.controller' => \InfyOm\Generator\Commands\API\APIControllerGeneratorCommand::class,
         'infyom.api.requests' => \InfyOm\Generator\Commands\API\APIRequestsGeneratorCommand::class,
@@ -633,6 +636,7 @@ namespace PHPSTORM_META {
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
         'html' => \Collective\Html\HtmlBuilder::class,
+        'image' => \Intervention\Image\ImageManager::class,
         'infyom.api' => \InfyOm\Generator\Commands\API\APIGeneratorCommand::class,
         'infyom.api.controller' => \InfyOm\Generator\Commands\API\APIControllerGeneratorCommand::class,
         'infyom.api.requests' => \InfyOm\Generator\Commands\API\APIRequestsGeneratorCommand::class,
@@ -800,6 +804,7 @@ namespace PHPSTORM_META {
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
         'html' => \Collective\Html\HtmlBuilder::class,
+        'image' => \Intervention\Image\ImageManager::class,
         'infyom.api' => \InfyOm\Generator\Commands\API\APIGeneratorCommand::class,
         'infyom.api.controller' => \InfyOm\Generator\Commands\API\APIControllerGeneratorCommand::class,
         'infyom.api.requests' => \InfyOm\Generator\Commands\API\APIRequestsGeneratorCommand::class,
@@ -967,6 +972,7 @@ namespace PHPSTORM_META {
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
         'html' => \Collective\Html\HtmlBuilder::class,
+        'image' => \Intervention\Image\ImageManager::class,
         'infyom.api' => \InfyOm\Generator\Commands\API\APIGeneratorCommand::class,
         'infyom.api.controller' => \InfyOm\Generator\Commands\API\APIControllerGeneratorCommand::class,
         'infyom.api.requests' => \InfyOm\Generator\Commands\API\APIRequestsGeneratorCommand::class,
@@ -1134,6 +1140,7 @@ namespace PHPSTORM_META {
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
         'html' => \Collective\Html\HtmlBuilder::class,
+        'image' => \Intervention\Image\ImageManager::class,
         'infyom.api' => \InfyOm\Generator\Commands\API\APIGeneratorCommand::class,
         'infyom.api.controller' => \InfyOm\Generator\Commands\API\APIControllerGeneratorCommand::class,
         'infyom.api.requests' => \InfyOm\Generator\Commands\API\APIRequestsGeneratorCommand::class,
@@ -1301,6 +1308,7 @@ namespace PHPSTORM_META {
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
         'html' => \Collective\Html\HtmlBuilder::class,
+        'image' => \Intervention\Image\ImageManager::class,
         'infyom.api' => \InfyOm\Generator\Commands\API\APIGeneratorCommand::class,
         'infyom.api.controller' => \InfyOm\Generator\Commands\API\APIControllerGeneratorCommand::class,
         'infyom.api.requests' => \InfyOm\Generator\Commands\API\APIRequestsGeneratorCommand::class,
