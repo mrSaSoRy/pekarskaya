@@ -17,6 +17,9 @@ Route::get('/', function () {
 Route::get('/test', function () {
         return view('demo');
 });
+Route::get('/index', function () {
+    return view('index');
+});
 Route::get('/blog', function () {
     return view('layouts/blog');
 });
