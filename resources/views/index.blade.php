@@ -1,52 +1,52 @@
 @extends('layouts/blog')
 
 @section('page')
+    @foreach ($pages as $page)
+
+
     <article class="blog_item">
         <div class="blog_item_img">
             <img class="card-img rounded-0" src="assets/img/blog/single_blog_1.png" alt="">
             <a href="#" class="blog_item_date">
-                <h3>15</h3>
-                <p>Jan</p>
+                <h3>{{$page->created_at->format('d')}}</h3>
+                <p>{{$page->created_at->format('M - Y')}}</p>
             </a>
         </div>
 
         <div class="blog_details">
             <a class="d-inline-block" href="blog_details.html">
-                <h2>Google inks pact for new 35-storey office</h2>
+                <h2>{{$page->title}}</h2>
             </a>
-            <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                he earth it first without heaven in place seed it second morning saying.</p>
-            <ul class="blog-info-link">
-                <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
-            </ul>
+            <p>{{$page->small_text}}</p>
         </div>
     </article>
+    @endforeach
 @endsection
 
 @section('category')
-    <li>
-        <a href="#" class="d-flex">
-            <p>Resaurant food</p>
-            <p>(37)</p>
-        </a>
-    </li>
-    <li>
-        <a href="#" class="d-flex">
-            <p>Travel news</p>
-            <p>(10)</p>
-        </a>
-    </li>
+
+    @foreach ($categories as $category)
+        <li>
+            <a href="#" class="d-flex">
+                <p>{{$category->title}}</p>
+                <p>(37)</p>
+            </a>
+        </li>
+    @endforeach
+
+
 @endsection
 
 @section('new_page')
+    @foreach ($pages as $page)
     <div class="media post_item">
         <img src="assets/img/post/post_1.png" alt="post">
         <div class="media-body">
             <a href="blog_details.html">
-                <h3>From life was you fish...</h3>
+                <h3>{{$page->title}}</h3>
             </a>
-            <p>January 12, 2019</p>
+            <p>{{$page->created_at->format('M d, Y')}}</p>
         </div>
     </div>
+    @endforeach
 @endsection
