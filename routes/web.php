@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('all', 'Frontend\MainController@index');
 
 Route::get('/', function () {
         return view('welcome');
@@ -21,7 +22,7 @@ Route::get('/index', function () {
     return view('index');
 });
 Route::get('/blog', function () {
-    return view('layouts/blog');
+    return view('layouts/blog_details');
 });
 
 Auth::routes();
