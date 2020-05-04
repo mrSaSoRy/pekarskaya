@@ -19,7 +19,8 @@ class CreatePagesTable extends Migration
             $table->string('title', 150);
             $table->string('small_text', 250);
             $table->text('text', 65535);
-            $table->datetime('deleted_at')->nullable();
+            $table->string('img', 255)->nullable();
+            $table->string('slug', 255)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
