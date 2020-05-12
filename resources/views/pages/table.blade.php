@@ -2,20 +2,26 @@
     <table class="table" id="pages-table">
         <thead>
             <tr>
-                <th>Категория</th>
-        <th>Заголовок</th>
+                <th>Category Id</th>
+        <th>Title</th>
         <th>Small Text</th>
         <th>Text</th>
+        <th>Img</th>
+        <th>Img Small</th>
+        <th>Slug</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
         <tbody>
         @foreach($pages as $page)
             <tr>
-                <td>{{ $page->categories->title }}</td>
+                <td>{{ $page->category_id }}</td>
             <td>{{ $page->title }}</td>
             <td>{{ $page->small_text }}</td>
             <td>{{ $page->text }}</td>
+            <td>{{ $page->img }}</td>
+            <td>{{ $page->img_small }}</td>
+            <td>{{ $page->slug }}</td>
                 <td>
                     {!! Form::open(['route' => ['pages.destroy', $page->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
