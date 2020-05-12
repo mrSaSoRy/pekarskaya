@@ -1,7 +1,7 @@
-<!-- Categories Id Field -->
+<!-- Category Id Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('categories_id', 'Categories Id:') !!}
-    {!! Form::select('categories_id', $categoryItems, null, ['class' => 'form-control']) !!}
+    {!! Form::label('category_id', 'Category Id:') !!}
+    {!! Form::number('category_id', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Title Field -->
@@ -20,6 +20,24 @@
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('text', 'Text:') !!}
     {!! Form::textarea('text', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Img Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('img', 'Img:') !!}
+    {!! Form::text('img', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Img Small Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('img_small', 'Img Small:') !!}
+    {!! Form::text('img_small', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Slug Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('slug', 'Slug:') !!}
+    {!! Form::text('slug', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Submit Field -->

@@ -7,19 +7,19 @@
    <title>Personal HTML-5 Template </title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+   <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
 
   <!-- CSS here -->
-      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-      <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-      <link rel="stylesheet" href="assets/css/slicknav.css">
-      <link rel="stylesheet" href="assets/css/animate.min.css">
-      <link rel="stylesheet" href="assets/css/magnific-popup.css">
-      <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-      <link rel="stylesheet" href="assets/css/themify-icons.css">
-      <link rel="stylesheet" href="assets/css/slick.css">
-      <link rel="stylesheet" href="assets/css/nice-select.css">
-      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+      <link rel="stylesheet" href="/assets/css/slicknav.css">
+      <link rel="stylesheet" href="/assets/css/animate.min.css">
+      <link rel="stylesheet" href="/assets/css/magnific-popup.css">
+      <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+      <link rel="stylesheet" href="/assets/css/themify-icons.css">
+      <link rel="stylesheet" href="/assets/css/slick.css">
+      <link rel="stylesheet" href="/assets/css/nice-select.css">
+      <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
@@ -29,7 +29,7 @@
             <div class="preloader-inner position-relative">
                <div class="preloader-circle"></div>
                <div class="preloader-img pere-text">
-                  <img src="assets/img/logo/loder.jpg" alt="">
+                  <img src="/assets/img/logo/loder.jpg" alt="">
                </div>
             </div>
       </div>
@@ -44,36 +44,40 @@
                           <!-- Logo -->
                           <div class="col-xl-2 col-lg-2 col-md-1">
                               <div class="logo">
-                                  <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                  <a href="/all"><img src="/assets/img/logo/logo.png" alt=""></a>
                               </div>
                           </div>
                           <div class="col-xl-10 col-lg-10 col-md-10">
                               <div class="menu-main d-flex align-items-center justify-content-end">
                                   <!-- Main-menu -->
                                   <div class="main-menu f-right d-none d-lg-block">
-                                      <nav> 
+                                      <nav>
                                           <ul id="navigation">
-                                              <li><a href="index.html">Home</a></li>
-                                              <li><a href="about.html">About</a></li>
-                                              <li><a href="services.html">Services</a></li>
+                                              <li><a href="/all">Главная</a></li>
+                                              <li><a href="">Студентам</a></li>
+                                              <li><a href="">Педагогам</a></li>
+                                              <li><a href="">Родителям</a></li>
+                                              <li><a href="about.html">Биография</a></li>
+
+                                              <!-- <li><a href="services.html">Services</a></li>
                                               <li><a href="portfolio.html">Portfolio</a></li>
                                               <li><a href="#">Page</a>
                                                   <ul class="submenu">
-                                                      <li><a href="blog.html">Blog</a></li>
+                                                      <li><a href="blog.blade.php">Блог</a></li>
                                                       <li><a href="blog_details.html">Blog Details</a></li>
                                                       <li><a href="elements.html">Element</a></li>
                                                       <li><a href="portfolio_details.html">Portfolio Details</a></li>
                                                   </ul>
-                                              </li>
-                                              <li><a href="contact.html">Contact</a></li>
+                                              </li>-->
+                                              <!-- <li><a href="contact.html">Contact</a></li> -->
                                           </ul>
                                       </nav>
                                   </div>
-                                  <div class="header-right-btn f-right d-none d-xl-block ml-20">
-                                      <a href="#" class="btn header-btn">Get Free Consultent</a>
-                                  </div>
+                                  <!--  <div class="header-right-btn f-right d-none d-xl-block ml-20">
+                                        <a href="#" class="btn header-btn">Get Free Consultent</a>
+                                    </div> -->
                               </div>
-                          </div>   
+                          </div>
                           <!-- Mobile Menu -->
                           <div class="col-12">
                               <div class="mobile_menu d-block d-lg-none"></div>
@@ -86,7 +90,7 @@
    </header>
    <main>
 
-      <!-- Hero Start -->
+      <!-- Hero Start
 		<div class="slider-area">
 			<div class="slider-height2 d-flex align-items-center">
 				<div class="container">
@@ -97,7 +101,7 @@
 								<nav aria-label="breadcrumb ">
 									<ol class="breadcrumb">
 									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item"><a href="#">Blog Details</a></li> 
+									<li class="breadcrumb-item"><a href="#">Blog Details</a></li>
 									</ol>
 								</nav>
 							</div>
@@ -106,14 +110,15 @@
 				</div>
 			</div>
 		</div>
-		<!-- Hero End -->
+		Hero End -->
       <!--================Blog Area =================-->
       <section class="blog_area single-post-area section-padding">
          <div class="container">
             <div class="row">
                <div class="col-lg-8 posts-list">
                   <div class="single-post">
-                     <div class="feature-img">
+                  @yield('page')
+                  <!--<div class="feature-img">
                         <img class="img-fluid" src="assets/img/blog/single_blog_1.png" alt="">
                      </div>
                      <div class="blog_details">
@@ -154,14 +159,15 @@
                            fraction of the camp price. However, who has the willpower to actually sit through a
                            self-imposed MCSE training. who has the willpower to actually
                         </p>
-                     </div>
+                     </div>-->
                   </div>
-                  <div class="navigation-top">
+                  </div>
+                  <!--<div class="navigation-top">
                      <div class="d-sm-flex justify-content-between text-center">
                         <p class="like-info"><span class="align-middle"><i class="fa fa-heart"></i></span> Lily and 4
                            people like this</p>
                         <div class="col-sm-4 text-center my-2 my-sm-0">
-                           <!-- <p class="comment-count"><span class="align-middle"><i class="fa fa-comment"></i></span> 06 Comments</p> -->
+                            <p class="comment-count"><span class="align-middle"><i class="fa fa-comment"></i></span> 06 Comments</p>
                         </div>
                         <ul class="social-icons">
                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -176,7 +182,7 @@
                               class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
                               <div class="thumb">
                                  <a href="#">
-                                    <img class="img-fluid" src="assets/img/post/preview.png" alt="">
+                                    <img class="img-fluid" src="/assets/img/post/preview.png" alt="">
                                  </a>
                               </div>
                               <div class="arrow">
@@ -206,16 +212,16 @@
                               </div>
                               <div class="thumb">
                                  <a href="#">
-                                    <img class="img-fluid" src="assets/img/post/next.png" alt="">
+                                    <img class="img-fluid" src="/assets/img/post/next.png" alt="">
                                  </a>
                               </div>
                            </div>
                         </div>
                      </div>
-                  </div>
-                  <div class="blog-author">
+                  </div>-->
+                  <!--<div class="blog-author">
                      <div class="media align-items-center">
-                        <img src="assets/img/blog/author.png" alt="">
+                        <img src="/assets/img/blog/author.png" alt="">
                         <div class="media-body">
                            <a href="#">
                               <h4>Harvard milan</h4>
@@ -231,7 +237,7 @@
                         <div class="single-comment justify-content-between d-flex">
                            <div class="user justify-content-between d-flex">
                               <div class="thumb">
-                                 <img src="assets/img/comment/comment_1.png" alt="">
+                                 <img src="/assets/img/comment/comment_1.png" alt="">
                               </div>
                               <div class="desc">
                                  <p class="comment">
@@ -337,27 +343,30 @@
                         </div>
                      </form>
                   </div>
-               </div>
+               </div>-->
                <div class="col-lg-4">
                   <div class="blog_right_sidebar">
                      <aside class="single_sidebar_widget search_widget">
                         <form action="#">
                            <div class="form-group">
                               <div class="input-group mb-3">
-                                 <input type="text" class="form-control" placeholder='Search Keyword'
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Keyword'">
+                                 <input type="text" class="form-control" placeholder='Поиск'
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Поиск'">
                                  <div class="input-group-append">
                                     <button class="btns" type="button"><i class="ti-search"></i></button>
                                  </div>
                               </div>
                            </div>
+                            <!--
                            <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                              type="submit">Search</button>
+                              type="submit">Search</button>-->
                         </form>
                      </aside>
                      <aside class="single_sidebar_widget post_category_widget">
-                        <h4 class="widget_title">Category</h4>
+                        <h4 class="widget_title">Рубрика блога</h4>
                         <ul class="list cat-list">
+                        @yield('category')
+                        <!--
                            <li>
                               <a href="#" class="d-flex">
                                  <p>Resaurant food</p>
@@ -394,77 +403,84 @@
                                  <p>(21)</p>
                               </a>
                            </li>
+                           -->
                         </ul>
                      </aside>
-                     <aside class="single_sidebar_widget popular_post_widget">
-                        <h3 class="widget_title">Recent Post</h3>
-                        <div class="media post_item">
-                           <img src="assets/img/post/post_1.png" alt="post">
-                           <div class="media-body">
-                              <a href="blog_details.html">
-                                 <h3>From life was you fish...</h3>
-                              </a>
-                              <p>January 12, 2019</p>
-                           </div>
-                        </div>
-                        <div class="media post_item">
-                           <img src="assets/img/post/post_2.png" alt="post">
-                           <div class="media-body">
-                              <a href="blog_details.html">
-                                 <h3>The Amazing Hubble</h3>
-                              </a>
-                              <p>02 Hours ago</p>
-                           </div>
-                        </div>
-                        <div class="media post_item">
-                           <img src="assets/img/post/post_3.png" alt="post">
-                           <div class="media-body">
-                              <a href="blog_details.html">
-                                 <h3>Astronomy Or Astrology</h3>
-                              </a>
-                              <p>03 Hours ago</p>
-                           </div>
-                        </div>
-                        <div class="media post_item">
-                           <img src="assets/img/post/post_4.png" alt="post">
-                           <div class="media-body">
-                              <a href="blog_details.html">
-                                 <h3>Asteroids telescope</h3>
-                              </a>
-                              <p>01 Hours ago</p>
-                           </div>
-                        </div>
-                     </aside>
-                     <aside class="single_sidebar_widget tag_cloud_widget">
-                        <h4 class="widget_title">Tag Clouds</h4>
-                        <ul class="list">
-                           <li>
-                              <a href="#">project</a>
-                           </li>
-                           <li>
-                              <a href="#">love</a>
-                           </li>
-                           <li>
-                              <a href="#">technology</a>
-                           </li>
-                           <li>
-                              <a href="#">travel</a>
-                           </li>
-                           <li>
-                              <a href="#">restaurant</a>
-                           </li>
-                           <li>
-                              <a href="#">life style</a>
-                           </li>
-                           <li>
-                              <a href="#">design</a>
-                           </li>
-                           <li>
-                              <a href="#">illustration</a>
-                           </li>
-                        </ul>
-                     </aside>
-                     <aside class="single_sidebar_widget instagram_feeds">
+                      <aside class="single_sidebar_widget popular_post_widget">
+                          <h3 class="widget_title">Свежие записи</h3>
+                      @yield('new_page')
+                      <!--
+                                <div class="media post_item">
+                                    <img src="assets/img/post/post_1.png" alt="post">
+                                    <div class="media-body">
+                                        <a href="blog_details.html">
+                                            <h3>From life was you fish...</h3>
+                                        </a>
+                                        <p>January 12, 2019</p>
+                                    </div>
+                                </div>
+                                <div class="media post_item">
+                                    <img src="assets/img/post/post_2.png" alt="post">
+                                    <div class="media-body">
+                                        <a href="blog_details.html">
+                                            <h3>The Amazing Hubble</h3>
+                                        </a>
+                                        <p>02 Hours ago</p>
+                                    </div>
+                                </div>
+                                <div class="media post_item">
+                                    <img src="assets/img/post/post_3.png" alt="post">
+                                    <div class="media-body">
+                                        <a href="blog_details.html">
+                                            <h3>Astronomy Or Astrology</h3>
+                                        </a>
+                                        <p>03 Hours ago</p>
+                                    </div>
+                                </div>
+                                <div class="media post_item">
+                                    <img src="assets/img/post/post_4.png" alt="post">
+                                    <div class="media-body">
+                                        <a href="blog_details.html">
+                                            <h3>Asteroids telescope</h3>
+                                        </a>
+                                        <p>01 Hours ago</p>
+                                    </div>
+                                </div>
+                                -->
+                      </aside>
+                      <!--
+                       <aside class="single_sidebar_widget tag_cloud_widget">
+                           <h4 class="widget_title">Tag Clouds</h4>
+                           <ul class="list">
+                               <li>
+                                   <a href="#">project</a>
+                               </li>
+                               <li>
+                                   <a href="#">love</a>
+                               </li>
+                               <li>
+                                   <a href="#">technology</a>
+                               </li>
+                               <li>
+                                   <a href="#">travel</a>
+                               </li>
+                               <li>
+                                   <a href="#">restaurant</a>
+                               </li>
+                               <li>
+                                   <a href="#">life style</a>
+                               </li>
+                               <li>
+                                   <a href="#">design</a>
+                               </li>
+                               <li>
+                                   <a href="#">illustration</a>
+                               </li>
+                           </ul>
+                       </aside>
+                       -->
+
+                      <!--<aside class="single_sidebar_widget instagram_feeds">
                         <h4 class="widget_title">Instagram Feeds</h4>
                         <ul class="instagram_row flex-wrap">
                            <li>
@@ -509,7 +525,7 @@
                            <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
                               type="submit">Subscribe</button>
                         </form>
-                     </aside>
+                     </aside>-->
                   </div>
                </div>
             </div>
@@ -526,7 +542,7 @@
                   <div class="row justify-content-center">
                      <div class="col-lg-6">
                            <div class="footer-top-cap text-center">
-                              <img src="assets/img/logo/logo2_footer.png" alt="">
+                              <img src="/assets/img/logo/logo2_footer.png" alt="">
                              <span><a href="#">hireme@portfolio.com</a></span>
                               <p>221B Baker Street, Post office Box 353 </p>
                               <p>Park Road, USA - 215431</p>
@@ -566,37 +582,37 @@
 
    <!-- JS here -->
 		<!-- All JS Custom Plugins Link Here here -->
-      <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+      <script src="/assets/js/vendor/modernizr-3.5.0.min.js"></script>
 		<!-- Jquery, Popper, Bootstrap -->
-		<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-      <script src="./assets/js/popper.min.js"></script>
-      <script src="./assets/js/bootstrap.min.js"></script>
+		<script src="/assets/js/vendor/jquery-1.12.4.min.js"></script>
+      <script src="/assets/js/popper.min.js"></script>
+      <script src="/assets/js/bootstrap.min.js"></script>
 	   <!-- Jquery Mobile Menu -->
-      <script src="./assets/js/jquery.slicknav.min.js"></script>
+      <script src="/assets/js/jquery.slicknav.min.js"></script>
 
 		<!-- Jquery Slick , Owl-Carousel Plugins -->
-      <script src="./assets/js/owl.carousel.min.js"></script>
-      <script src="./assets/js/slick.min.js"></script>
+      <script src="/assets/js/owl.carousel.min.js"></script>
+      <script src="/assets/js/slick.min.js"></script>
 
 		<!-- One Page, Animated-HeadLin -->
-      <script src="./assets/js/wow.min.js"></script>
-		<script src="./assets/js/animated.headline.js"></script>
-      <script src="./assets/js/jquery.magnific-popup.js"></script>
+      <script src="/assets/js/wow.min.js"></script>
+		<script src="/assets/js/animated.headline.js"></script>
+      <script src="/assets/js/jquery.magnific-popup.js"></script>
 
 		<!-- Nice-select, sticky -->
-      <script src="./assets/js/jquery.nice-select.min.js"></script>
-		<script src="./assets/js/jquery.sticky.js"></script>
-        
+      <script src="/assets/js/jquery.nice-select.min.js"></script>
+		<script src="/assets/js/jquery.sticky.js"></script>
+
       <!-- contact js -->
-      <script src="./assets/js/contact.js"></script>
-      <script src="./assets/js/jquery.form.js"></script>
-      <script src="./assets/js/jquery.validate.min.js"></script>
-      <script src="./assets/js/mail-script.js"></script>
-      <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-        
-		<!-- Jquery Plugins, main Jquery -->	
-      <script src="./assets/js/plugins.js"></script>
-      <script src="./assets/js/main.js"></script>
+      <script src="/assets/js/contact.js"></script>
+      <script src="/assets/js/jquery.form.js"></script>
+      <script src="/assets/js/jquery.validate.min.js"></script>
+      <script src="/assets/js/mail-script.js"></script>
+      <script src="/assets/js/jquery.ajaxchimp.min.js"></script>
+
+		<!-- Jquery Plugins, main Jquery -->
+      <script src="/assets/js/plugins.js"></script>
+      <script src="/assets/js/main.js"></script>
 
 </body>
 

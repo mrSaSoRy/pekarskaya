@@ -8,7 +8,7 @@ use App\Repositories\BaseRepository;
 /**
  * Class PageRepository
  * @package App\Repositories
- * @version April 27, 2020, 2:43 am UTC
+ * @version May 7, 2020, 3:57 am UTC
 */
 
 class PageRepository extends BaseRepository
@@ -17,10 +17,13 @@ class PageRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        'categories_id',
+        'category_id',
         'title',
         'small_text',
-        'text'
+        'text',
+        'img',
+        'img_small',
+        'slug'
     ];
 
     /**
