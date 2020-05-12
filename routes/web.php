@@ -11,6 +11,7 @@
 |
 */
 Route::get('all', 'Frontend\MainController@index');
+Route::get('/post/{id}', 'Frontend\MainController@singlePost');
 
 Route::get('/', function () {
         return view('welcome');

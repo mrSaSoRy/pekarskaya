@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Page as Page;
 
+
 class MainController extends Controller
 {
     /**
@@ -18,7 +19,12 @@ class MainController extends Controller
     {
         $pages=Page::all();
         $categories=Category::all();
-        return view('index', ['pages'=>$pages,'categories'=>$categories]);
+        $lastPages=\DB::table('pages')
+            ->latest()
+            ->limit(5)
+            ->get();
+        //dd($lastPages);
+        return view('index', ['pages'=>$pages,'categories'=>$categories,'lastPages'=>$lastPages]);
 
 
         //dd($categories);
@@ -89,5 +95,16 @@ class MainController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function singlePost($id)
+    {
+        $post=Page::findOrFail($id);
+        $categories=Category::all();
+        $lastPages=\DB::table('pages')
+            ->latest()
+            ->limit(5)
+            ->get();
+        //dd($lastPages);
+        return view('singlePost', ['post'=>$post,'categories'=>$categories,'lastPages'=>$lastPages]);
     }
 }

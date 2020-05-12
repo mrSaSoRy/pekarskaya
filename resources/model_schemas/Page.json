@@ -12,21 +12,20 @@
         "inView": false
     },
     {
-        "name": "categories_id",
+        "name": "category_id",
         "dbType": "bigInteger,false,true",
-        "htmlType": "selectTable:categories:title,id",
+        "htmlType": null,
         "validations": "required",
         "searchable": true,
         "fillable": true,
         "primary": false,
         "inForm": true,
         "inIndex": true,
-        "inView": true,
-        "relation": "1tm,Category,categories_id"
+        "inView": true
     },
     {
         "name": "title",
-        "dbType": "string,150",
+        "dbType": "string,255",
         "htmlType": "text",
         "validations": "required",
         "searchable": true,
@@ -38,7 +37,7 @@
     },
     {
         "name": "small_text",
-        "dbType": "string,250",
+        "dbType": "string,255",
         "htmlType": "text",
         "validations": "required",
         "searchable": true,
@@ -61,10 +60,46 @@
         "inView": true
     },
     {
+        "name": "img",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "img_small",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "slug",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
         "name": "created_at",
-        "dbType": "datetime",
+        "dbType": "datetime:nullable",
         "htmlType": "date",
-        "validations": "required",
+        "validations": null,
         "searchable": false,
         "fillable": false,
         "primary": false,
@@ -74,9 +109,9 @@
     },
     {
         "name": "updated_at",
-        "dbType": "datetime",
+        "dbType": "datetime:nullable",
         "htmlType": "date",
-        "validations": "required",
+        "validations": null,
         "searchable": false,
         "fillable": false,
         "primary": false,
@@ -95,5 +130,9 @@
         "inForm": false,
         "inIndex": false,
         "inView": false
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,Category,category_id"
     }
 ]

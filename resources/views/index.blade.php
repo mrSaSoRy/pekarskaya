@@ -14,7 +14,7 @@
         </div>
 
         <div class="blog_details">
-            <a class="d-inline-block" href="blog_details.html">
+            <a class="d-inline-block" href="post/{{$page->id}}">
                 <h2>{{$page->title}}</h2>
             </a>
             <p>{{$page->small_text}}</p>
@@ -38,14 +38,14 @@
 @endsection
 
 @section('new_page')
-    @foreach ($pages as $page)
+    @foreach ($lastPages as $last)
     <div class="media post_item">
-        <img src="{{$page->img_small}}" alt="post">
+        <img src="{{$last->img_small}}" alt="post">
         <div class="media-body">
             <a href="blog_details.html">
-                <h3>{{$page->title}}</h3>
+                <h3>{{$last->title}}</h3>
             </a>
-            <p>{{$page->created_at->format('M d, Y')}}</p>
+            <p>{{$last->created_at}}</p>
         </div>
     </div>
     @endforeach

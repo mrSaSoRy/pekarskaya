@@ -15,7 +15,7 @@ class CreatePagesTable extends Migration
     {
         Schema::create('pages', function (Blueprint $table) {
             $table->bigInteger('id', true, true);
-            $table->unsignedBigInteger('categories_id');
+            $table->unsignedBigInteger('category_id');
             $table->string('title');
             $table->string('small_text');
             $table->text('text');
@@ -25,7 +25,7 @@ class CreatePagesTable extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('categories_id')->references('id')->on('categories');
+            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 

@@ -8,19 +8,25 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Page
  * @package App\Models
- * @version April 27, 2020, 2:43 am UTC
+ * @version May 7, 2020, 3:57 am UTC
  *
- * @property \Illuminate\Database\Eloquent\Collection $categories
- * @property integer $categories_id
+ * @property \App\Models\Category $category
+ * @property integer $category_id
  * @property string $title
  * @property string $small_text
  * @property string $text
+ * @property string $img
+ * @property string $img_small
+ * @property string $slug
  */
 class Page extends Model
 {
     use SoftDeletes;
 
     public $table = 'pages';
+    
+    const CREATED_AT = 'created_at';
+    const UPDATED_AT = 'updated_at';
 
 
     protected $dates = ['deleted_at'];
@@ -28,10 +34,13 @@ class Page extends Model
 
 
     public $fillable = [
-        'categories_id',
+        'category_id',
         'title',
         'small_text',
-        'text'
+        'text',
+        'img',
+        'img_small',
+        'slug'
     ];
 
     /**
@@ -41,10 +50,13 @@ class Page extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'categories_id' => 'integer',
+        'category_id' => 'integer',
         'title' => 'string',
         'small_text' => 'string',
-        'text' => 'string'
+        'text' => 'string',
+        'img' => 'string',
+        'img_small' => 'string',
+        'slug' => 'string'
     ];
 
     /**
@@ -53,20 +65,17 @@ class Page extends Model
      * @var array
      */
     public static $rules = [
-
+        'category_id' => 'required',
         'title' => 'required',
         'small_text' => 'required',
-        'text' => 'required',
-//        'created_at' => 'required',
-//        'updated_at' => 'required',
-        'categories_id' => 'required'
+        'text' => 'required'
     ];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      **/
-    public function categories()
+    public function category()
     {
-        return $this->belongsTo(\App\Models\Category::class, 'categories_id');
+        return $this->belongsTo(\App\Models\Category::class, 'category_id');
     }
 }
