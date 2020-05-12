@@ -6,7 +6,7 @@
 
     <article class="blog_item">
         <div class="blog_item_img">
-            <img class="card-img rounded-0" src="assets/img/blog/single_blog_1.png" alt="">
+            <img class="card-img rounded-0" src="{{$page->img}}" alt="">
             <a href="#" class="blog_item_date">
                 <h3>{{$page->created_at->format('d')}}</h3>
                 <p>{{$page->created_at->format('M - Y')}}</p>
@@ -40,7 +40,7 @@
 @section('new_page')
     @foreach ($pages as $page)
     <div class="media post_item">
-        <img src="assets/img/post/post_1.png" alt="post">
+        <img src="{{$page->img_small}}" alt="post">
         <div class="media-body">
             <a href="blog_details.html">
                 <h3>{{$page->title}}</h3>
