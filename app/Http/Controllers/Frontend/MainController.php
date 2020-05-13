@@ -17,7 +17,7 @@ class MainController extends Controller
      */
     public function index()
     {
-        $pages=Page::all();
+        $pages=Page::paginate(3);
         $categories=Category::all();
         $lastPages=\DB::table('pages')
             ->latest()
@@ -96,9 +96,10 @@ class MainController extends Controller
     {
         //
     }
-    public function singlePost($id)
+    public function singlePost($slug)
     {
-        $post=Page::findOrFail($id);
+        $post=Page::all()->where('slug','=',$slug);
+//        dd($post);
         $categories=Category::all();
         $lastPages=\DB::table('pages')
             ->latest()
@@ -110,8 +111,8 @@ class MainController extends Controller
 
     public function categoryPost($id)
     {
-        $pages=Page::all()
-            ->where('category_id','=',$id);
+        $pages=Page::where('category_id','=',$id)
+            ->paginate(3);
         $categories=Category::all();
         $lastPages=\DB::table('pages')
             ->latest()

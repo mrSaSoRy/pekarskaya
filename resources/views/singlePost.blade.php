@@ -1,18 +1,18 @@
 @extends('layouts/blog_details')
 
 @section('page')
-    @if ($post === false)
-        WTF!
+    @if ($post->count() === 0)
+        <script> window.location = "/all";</script>
 
     @else
-
+        @foreach( $post as $p)
         <div class="feature-img">
-            <img class="img-fluid" src="{{$post->img}}" alt="">
+            <img class="img-fluid" src="{{$p->img}}" alt="">
         </div>
         <div class="blog_details">
-            <h2>{{$post->title}}</h2>
+            <h2>{{$p->title}}</h2>
 
-            <p>{{$post->text}}</p>
+            <p>{{$p->text}}</p>
         </div>
 
             <!--
@@ -31,7 +31,7 @@
                 </div>
             </div>
             -->
-
+        @endforeach
     @endif
 @endsection
 
@@ -39,7 +39,7 @@
 
     @foreach ($categories as $category)
         <li>
-            <a href="/all/{{$category->id}}" class="d-flex">
+            <a href="/category/{{$category->id}}" class="d-flex">
                 <p>{{$category->title}}</p>
 
             </a>
