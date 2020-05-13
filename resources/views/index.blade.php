@@ -14,20 +14,28 @@
         </div>
 
         <div class="blog_details">
-            <a class="d-inline-block" href="/post/{{$page->id}}">
+            <a class="d-inline-block" href="/post/{{$page->slug}}">
                 <h2>{{$page->title}}</h2>
             </a>
             <p>{{$page->small_text}}</p>
         </div>
     </article>
     @endforeach
+
+    <nav class="blog-pagination justify-content-center d-flex">
+        <ul class="pagination">
+            <li class="page-item">
+                {{$pages->links()}}
+            </li>
+        </ul>
+    </nav>
 @endsection
 
 @section('category')
 
     @foreach ($categories as $category)
         <li>
-            <a href="/all/{{$category->id}}" class="d-flex">
+            <a href="/category/{{$category->id}}" class="d-flex">
                 <p>{{$category->title}}</p>
                 <!--<p>(37)</p>-->
             </a>
