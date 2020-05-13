@@ -39,9 +39,9 @@
 
     @foreach ($categories as $category)
         <li>
-            <a href="#" class="d-flex">
+            <a href="/all/{{$category->id}}" class="d-flex">
                 <p>{{$category->title}}</p>
-                <p>(37)</p>
+
             </a>
         </li>
     @endforeach
