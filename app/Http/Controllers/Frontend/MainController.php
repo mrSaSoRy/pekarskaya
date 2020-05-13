@@ -23,7 +23,7 @@ class MainController extends Controller
             ->latest()
             ->limit(5)
             ->get();
-        //dd($lastPages);
+        //dd($pages);
         return view('index', ['pages'=>$pages,'categories'=>$categories,'lastPages'=>$lastPages]);
 
 
@@ -106,5 +106,22 @@ class MainController extends Controller
             ->get();
         //dd($lastPages);
         return view('singlePost', ['post'=>$post,'categories'=>$categories,'lastPages'=>$lastPages]);
+    }
+
+    public function categoryPost($id)
+    {
+        $pages=Page::all()
+            ->where('category_id','=',$id);
+        $categories=Category::all();
+        $lastPages=\DB::table('pages')
+            ->latest()
+            ->limit(5)
+            ->get();
+        //dd($pages);
+        return view('index', ['pages'=>$pages,'categories'=>$categories,'lastPages'=>$lastPages]);
+
+
+        //dd($categories);
+        //
     }
 }

@@ -14,7 +14,7 @@
         </div>
 
         <div class="blog_details">
-            <a class="d-inline-block" href="post/{{$page->id}}">
+            <a class="d-inline-block" href="/post/{{$page->id}}">
                 <h2>{{$page->title}}</h2>
             </a>
             <p>{{$page->small_text}}</p>
@@ -27,7 +27,7 @@
 
     @foreach ($categories as $category)
         <li>
-            <a href="#" class="d-flex">
+            <a href="/all/{{$category->id}}" class="d-flex">
                 <p>{{$category->title}}</p>
                 <!--<p>(37)</p>-->
             </a>

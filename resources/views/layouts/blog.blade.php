@@ -55,7 +55,7 @@
                                     <div class="main-menu f-right d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">
-                                                <li><a href="blog">Главная</a></li>
+                                                <li><a href="/all">Главная</a></li>
                                                 <li><a href="">Студентам</a></li>
                                                 <li><a href="">Педагогам</a></li>
                                                 <li><a href="">Родителям</a></li>
