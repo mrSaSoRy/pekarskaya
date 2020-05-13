@@ -29,7 +29,7 @@
         <li>
             <a href="#" class="d-flex">
                 <p>{{$category->title}}</p>
-                <p>(37)</p>
+                <!--<p>(37)</p>-->
             </a>
         </li>
     @endforeach
@@ -42,7 +42,7 @@
     <div class="media post_item">
         <img src="{{$last->img_small}}" alt="post">
         <div class="media-body">
-            <a href="blog_details.html">
+            <a href="post/{{$last->id}}">
                 <h3>{{$last->title}}</h3>
             </a>
             <p>{{$last->created_at}}</p>
