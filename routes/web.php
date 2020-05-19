@@ -11,7 +11,7 @@
 |
 */
 Route::get('all', 'Frontend\MainController@index');
-Route::get('/post/{slug}', 'Frontend\MainController@singlePost');
+Route::get('/post/{slug}.html', 'Frontend\MainController@singlePost');
 Route::get('/category/{id}', 'Frontend\MainController@categoryPost');
 
 Route::get('/', function () {

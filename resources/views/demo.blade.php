@@ -68,7 +68,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/ckeditor/4.5.11/ckeditor.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ckeditor/4.5.11/adapters/jquery.js"></script>
   <script>
-    $('textarea[name=ce]').ckeditor({
+    $('textarea[=ce]').ckeditor({
       height: 100,
       filebrowserImageBrowseUrl: route_prefix + '?type=Images',
       filebrowserImageUploadUrl: route_prefix + '/upload?type=Images&_token={{csrf_token()}}',

@@ -8,7 +8,12 @@ use App\Repositories\PageRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Routing\Redirector;
+use Illuminate\View\View;
 use Response;
+use Illuminate\Support\Str;
 
 class PageController extends AppBaseController
 {
@@ -25,11 +30,11 @@ class PageController extends AppBaseController
      *
      * @param Request $request
      *
-     * @return Response
+     * @return Response|Factory|RedirectResponse|Redirector|View
      */
     public function index(Request $request)
     {
-        $pages = $this->pageRepository->all();
+        $pages = $this->pageRepository->paginate(15);
 
         return view('pages.index')
             ->with('pages', $pages);
@@ -38,11 +43,12 @@ class PageController extends AppBaseController
     /**
      * Show the form for creating a new Page.
      *
-     * @return Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View|Response
      */
     public function create()
     {
-        return view('pages.create');
+        $category = \App\Models\Category::all('id','title')->pluck('title', 'id');
+        return view('pages.create',['category'=>$category]);
     }
 
     /**
@@ -50,7 +56,7 @@ class PageController extends AppBaseController
      *
      * @param CreatePageRequest $request
      *
-     * @return Response
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|Response
      */
     public function store(CreatePageRequest $request)
     {
@@ -68,7 +74,7 @@ class PageController extends AppBaseController
      *
      * @param int $id
      *
-     * @return Response
+     * @return Factory|RedirectResponse|Redirector|View|Response
      */
     public function show($id)
     {
@@ -88,19 +94,19 @@ class PageController extends AppBaseController
      *
      * @param int $id
      *
-     * @return Response
+     * @return Factory|RedirectResponse|Redirector|View|Response
      */
     public function edit($id)
     {
         $page = $this->pageRepository->find($id);
-
+        $category = \App\Models\Category::all('id','title')->pluck('title', 'id');
         if (empty($page)) {
             Flash::error('Page not found');
 
             return redirect(route('pages.index'));
         }
 
-        return view('pages.edit')->with('page', $page);
+        return view('pages.edit',['category'=>$category])->with('page', $page);
     }
 
     /**
@@ -109,11 +115,13 @@ class PageController extends AppBaseController
      * @param int $id
      * @param UpdatePageRequest $request
      *
-     * @return Response
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|Response
      */
     public function update($id, UpdatePageRequest $request)
     {
         $page = $this->pageRepository->find($id);
+        //$request->request->get('slug') = Str::slug($request->request->get('title'));
+        dd($request->request->get('slug'));
 
         if (empty($page)) {
             Flash::error('Page not found');
@@ -135,7 +143,7 @@ class PageController extends AppBaseController
      *
      * @throws \Exception
      *
-     * @return Response
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|Response
      */
     public function destroy($id)
     {

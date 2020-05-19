@@ -8,6 +8,10 @@ use App\Repositories\CategoryRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Routing\Redirector;
+use Illuminate\View\View;
 use Response;
 
 class CategoryController extends AppBaseController
@@ -25,11 +29,11 @@ class CategoryController extends AppBaseController
      *
      * @param Request $request
      *
-     * @return Response
+     * @return Response|Factory|RedirectResponse|Redirector|View
      */
     public function index(Request $request)
     {
-        $categories = $this->categoryRepository->all();
+        $categories = $this->categoryRepository->paginate(15);
 
         return view('categories.index')
             ->with('categories', $categories);
@@ -38,7 +42,7 @@ class CategoryController extends AppBaseController
     /**
      * Show the form for creating a new Category.
      *
-     * @return Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View|Response
      */
     public function create()
     {
@@ -50,7 +54,7 @@ class CategoryController extends AppBaseController
      *
      * @param CreateCategoryRequest $request
      *
-     * @return Response
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|Response
      */
     public function store(CreateCategoryRequest $request)
     {
@@ -68,7 +72,7 @@ class CategoryController extends AppBaseController
      *
      * @param int $id
      *
-     * @return Response
+     * @return Factory|RedirectResponse|Redirector|View|Response
      */
     public function show($id)
     {
@@ -88,7 +92,7 @@ class CategoryController extends AppBaseController
      *
      * @param int $id
      *
-     * @return Response
+     * @return Factory|RedirectResponse|Redirector|View|Response
      */
     public function edit($id)
     {
@@ -109,7 +113,7 @@ class CategoryController extends AppBaseController
      * @param int $id
      * @param UpdateCategoryRequest $request
      *
-     * @return Response
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|Response
      */
     public function update($id, UpdateCategoryRequest $request)
     {
@@ -135,7 +139,7 @@ class CategoryController extends AppBaseController
      *
      * @throws \Exception
      *
-     * @return Response
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|Response
      */
     public function destroy($id)
     {

@@ -8,9 +8,9 @@ use Faker\Generator as Faker;
 $factory->define(Category::class, function (Faker $faker) {
 
     return [
-        'title' => $faker->realText($faker->numberBetween(15,45)),
+        'title' => $faker->word,
         'created_at' => $faker->date('Y-m-d H:i:s'),
         'updated_at' => $faker->date('Y-m-d H:i:s'),
-//        'deleted_at' => $faker->date('Y-m-d H:i:s')
+        'deleted_at' => $faker->date('Y-m-d H:i:s')
     ];
 });

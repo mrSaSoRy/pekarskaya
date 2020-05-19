@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Category
  * @package App\Models
- * @version April 27, 2020, 2:11 am UTC
+ * @version May 18, 2020, 6:22 am UTC
  *
+ * @property \Illuminate\Database\Eloquent\Collection $pages
  * @property string $title
  */
 class Category extends Model
@@ -17,7 +18,7 @@ class Category extends Model
     use SoftDeletes;
 
     public $table = 'categories';
-
+    
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -46,14 +47,14 @@ class Category extends Model
      * @var array
      */
     public static $rules = [
-        'title' => 'required'/*,
-        'created_at' => 'required',
-        'updated_at' => 'required'*/
+        'title' => 'required'
     ];
 
-    public function page()
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     **/
+    public function pages()
     {
-        return $this->hasMany('App\Models\Page');
+        return $this->hasMany(\App\Models\Page::class, 'category_id');
     }
-
 }

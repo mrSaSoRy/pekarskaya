@@ -14,7 +14,7 @@
         </div>
 
         <div class="blog_details">
-            <a class="d-inline-block" href="/post/{{$page->slug}}">
+            <a class="d-inline-block" href="/post/{{$page->slug}}.html">
                 <h2>{{$page->title}}</h2>
             </a>
             <p>{{$page->small_text}}</p>
