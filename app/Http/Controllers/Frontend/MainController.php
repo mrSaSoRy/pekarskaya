@@ -17,7 +17,7 @@ class MainController extends Controller
      */
     public function index()
     {
-        $pages=Page::paginate(3);
+        $pages=Page::paginate(5);
         $categories=Category::all();
         $lastPages=\DB::table('pages')
             ->latest()

@@ -61,6 +61,7 @@ class PageController extends AppBaseController
     public function store(CreatePageRequest $request)
     {
         $input = $request->all();
+        $input['slug'] = Str::slug($input['title']);
 
         $page = $this->pageRepository->create($input);
 
@@ -120,16 +121,17 @@ class PageController extends AppBaseController
     public function update($id, UpdatePageRequest $request)
     {
         $page = $this->pageRepository->find($id);
-        //$request->request->get('slug') = Str::slug($request->request->get('title'));
-        dd($request->request->get('slug'));
+
 
         if (empty($page)) {
             Flash::error('Page not found');
 
             return redirect(route('pages.index'));
         }
+        $input = $request->all();
+        $input['slug'] = Str::slug($input['title']);
 
-        $page = $this->pageRepository->update($request->all(), $id);
+        $page = $this->pageRepository->update($input, $id);
 
         Flash::success('Page updated successfully.');
 

@@ -48,9 +48,9 @@
 @section('new_page')
     @foreach ($lastPages as $last)
     <div class="media post_item">
-        <img src="{{$last->img_small}}" alt="post">
+        <img src="{{$last->img}}" alt="post" style="max-height:80px;max-width: 80px;">
         <div class="media-body">
-            <a href="post/{{$last->id}}">
+            <a href="post/{{$last->slug}}.html">
                 <h3>{{$last->title}}</h3>
             </a>
             <p>{{$last->created_at}}</p>

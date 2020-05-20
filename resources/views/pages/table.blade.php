@@ -20,7 +20,7 @@
                 <td>{{ $page->small_text }}</td>
                 {{--            <td>{{ $page->text }}</td>--}}
                 {{--            <td>{{ $page->img }}</td>--}}
-                <td>{{ $page->img_small }}</td>
+                <td><img src="{{ $page->img }}" style="max-height:100px;max-width: 200px;"></td>
                 <td>{{ $page->slug }}.html</td>
                 <td>
                     {!! Form::open(['route' => ['pages.destroy', $page->id], 'method' => 'delete']) !!}
